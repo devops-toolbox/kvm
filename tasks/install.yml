@@ -1,0 +1,14 @@
+---
+# Install kvm packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ kvm_packages_repos }}"
+    state: present
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ kvm_packages_install }}"
+    state: present
+  become: true

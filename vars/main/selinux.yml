@@ -1,0 +1,14 @@
+---
+# SELinux flags to enable
+_kvm_selinux_enable:
+  all:
+    - name: staff_use_svirt
+      state: true
+      persistent: true
+  CentOS_7: []
+  RedHat_7: []
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []
+  Debian_10: []
+  Ubuntu_18: []

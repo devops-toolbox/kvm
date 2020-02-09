@@ -1,0 +1,11 @@
+---
+# Configure kvm
+
+- name: service is enabled and started
+  service:
+    name: "{{ item }}"
+    enabled: true
+    state: started
+  become: true
+  loop: "{{ kvm_services_enable }}"
+  when: kvm_enable_service

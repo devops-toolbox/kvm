@@ -1,0 +1,108 @@
+---
+# Remove packages: uninstall if found
+_kvm_packages_remove:
+  all: []
+  CentOS_7: []
+  RedHat_7: []
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []
+  Debian_10: []
+  Ubuntu_18: []
+
+# Prereq packages: they get installed first
+_kvm_packages_prereq:
+  all: []
+  CentOS_7:
+    - libsemanage-python
+  RedHat_7:
+    - libsemanage-python
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []
+  Debian_10: []
+  Ubuntu_18: []
+
+# Install packages
+_kvm_packages_install:
+  all: []
+  CentOS_7:
+    - qemu-kvm
+    - libvirt
+    - libvirt-python
+    - libvirt-client
+    - libguestfs-tools
+    - virt-top
+    - virt-manager
+    - libguestfs
+    - qemu-kvm
+    - qemu-img
+    - genisoimage
+  CentOS_8:
+    - libvirt
+    - libvirt-client
+    - virt-top
+    - libguestfs-tools
+    - virt-manager
+    - libguestfs
+    - policycoreutils-python-utils
+    - qemu-kvm
+    - qemu-img
+    - python3-libvirt
+    - libvirt-nss
+    - virt-install
+    - genisoimage
+  RedHat_7:
+    - qemu-kvm
+    - libvirt
+    - libvirt-python
+    - libvirt-client
+    - libguestfs-tools
+    - virt-top
+    - virt-manager
+    - libguestfs
+    - qemu-kvm
+    - qemu-img
+    - genisoimage
+  RedHat_8:
+    - libvirt
+    - libvirt-client
+    - virt-top
+    - libguestfs-tools
+    - virt-manager
+    - libguestfs
+    - policycoreutils-python-utils
+    - qemu-kvm
+    - qemu-img
+    - python3-libvirt
+    - libvirt-nss
+    - virt-install
+    - genisoimage
+  Fedora_31:
+    - libvirt
+    - libvirt-client
+    - virt-top
+    - libguestfs-tools
+    - virt-manager
+    - libguestfs
+    - policycoreutils-python-utils
+    - qemu-kvm
+    - qemu-img
+    - python3-libvirt
+    - libvirt-nss
+    - virt-install
+    - genisoimage
+  Debian_10:
+    - qemu-kvm
+    - libvirt-daemon-system
+    - libvirt-clients
+    - virtinst
+    - bridge-utils
+    - cpu-checker
+  Ubuntu_18:
+    - qemu-kvm
+    - libvirt-daemon-system
+    - libvirt-clients
+    - virtinst
+    - bridge-utils
+    - cpu-checker

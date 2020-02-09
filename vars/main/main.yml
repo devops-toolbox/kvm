@@ -1,0 +1,44 @@
+---
+# vars file for packages
+
+# Detected OS
+my_os: "{{ ansible_distribution }}_{{ ansible_distribution_major_version }}"
+
+# Repos create
+kvm_repos_create: "{{ _kvm_repos_create['all']
+  | union ( _kvm_repos_create[my_os]
+  | default([]) ) }}"
+
+# Repos download
+kvm_repos_download: "{{ _kvm_repos_download['all']
+  | union ( _kvm_repos_download[my_os]
+  | default([]) ) }}"
+
+# Templates Copy
+kvm_templates_copy: "{{ _kvm_templates_copy['all']
+  | union ( _kvm_templates_copy[my_os]
+  | default([]) ) }}"
+
+# Services Enable
+kvm_services_enable: "{{ _kvm_services_enable['all']
+  | union ( _kvm_services_enable[my_os]
+  | default([]) ) }}"
+
+# SELinux Enable
+kvm_selinux_enable: "{{ _kvm_selinux_enable['all']
+  | union ( _kvm_selinux_enable[my_os]
+  | default([]) ) }}"
+
+# Packages lists
+kvm_packages_remove: "{{ _kvm_packages_remove['all']
+  | union ( _kvm_packages_remove[my_os]
+  | default([]) ) }}"
+kvm_packages_repos: "{{ _kvm_packages_repos['all']
+  | union ( _kvm_packages_repos[my_os]
+  | default([]) ) }}"
+kvm_packages_prereq: "{{ _kvm_packages_prereq['all']
+  | union ( _kvm_packages_prereq[my_os]
+  | default([]) ) }}"
+kvm_packages_install: "{{ _kvm_packages_install['all']
+  | union ( _kvm_packages_install[my_os]
+  | default([]) ) }}"
