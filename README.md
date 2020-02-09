@@ -8,10 +8,10 @@ kvm
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.kvm](https://galaxy.ansible.com/devops-toolbox.kvm)
+[https://galaxy.ansible.com/devopstoolbox.kvm](https://galaxy.ansible.com/devopstoolbox.kvm)
 
 ```bash
-ansible-galaxy install devops-toolbox.kvm
+ansible-galaxy install devopstoolbox.kvm
 ```
 
 Requirements
@@ -48,7 +48,7 @@ Example Playbook
   tasks:
     - name: kvm is configured
       import_role:
-        name: devops-toolbox.kvm
+        name: devopstoolbox.kvm
       vars:
         kvm_enable_service: true
         kvm_enable_selinux: true
@@ -66,4 +66,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
